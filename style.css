@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+body {
+    display: flex;                          /* Ativa o modo de caixa flexível */
+    justify-content: center;                /* Centraliza a calculadora na horizontal */
+    align-items: center;                    /* Centraliza a calculadora na vertical */
+    min-height: 100vh;                      /* Faz o corpo ocupar a altura toda da tela */
+    margin: 0;                              /* Remove espaços vazios nas bordas da página */
+    background-color: #f0f0f0;            /* Define a cor de fundo da página (cinza claro) */
+    font-family: Arial, sans-serif;         /* Define a fonte do texto */
+}
+
+#principal {
+    text-align: center;                     /* Centraliza o título "calculadora" */
+    color: white;                         /* Deixa o texto do título branco */
+    font-size: 1.2rem;                      /* Define o tamanho da letra do título */
+    margin-top: 0;                          /* Remove o espaço extra no topo do título */
+}
+.visor {
+    background-color: #a7bcaf;          /* Cor verde da tela */
+    height: 60px;                       /* Altura do visor */
+    margin-bottom: 20px;                /* Espaço antes dos botões */
+    border-radius: 10px;                /* Cantos arredondados */
+    text-align: right;                  /* Número na direita */
+    padding: 0 20px;                    /* Espaço nas laterais */
+    font-size: 35px;                    /* Tamanho do número */
+    color: #000;                        /* Cor do número (preto) */
+    display: flex;                      /* Alinhamento flexível */
+    align-items: center;                /* Centraliza verticalmente */
+    justify-content: flex-end;          /* Joga o 0 para a direita */
+    font-family: monospace;             /* Fonte digital */
+}
+
+
+.calculadora {
+    background-color: #333;                       /* Cor de fundo da carcaça (cinza escuro) */
+    padding: 25px;                        /* Espaçamento entre a borda e o conteúdo interno */
+    border-radius: 20px;                            /* Arredonda as quinas da calculadora */
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.3);   /* Cria a sombra para dar efeito de profundidade */
+
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+
+ .seu-container-cinza {
+    display: grid;                          /* Ativa o modo de grade para organizar botões */
+    grid-template-columns: repeat(4, 1fr);  /* Cria 3 colunas de tamanhos iguais */
+    gap: 10px;
+    justify-items: stretch;
+    margin-top: 15px;                      /* Cria um espaço (buraco) entre cada botão */
+}
+
+.operador {
+    background-color: #ff9500;             /* Cor laranja para os sinais */
+    color: white;
+}
+
+/* Botão de Igual (Verde ou Azul) */
+.igual {
+    background-color: #2ecc71;             /* Cor verde para o resultado */
+    color: white;
+}
+
+/* Botão de Limpar (Vermelho) */
+.limpar {
+    background-color: #e74c3c;             /* Cor vermelha para o "C" */
+    color: white;
+}
+
+.botao {
+    display: flex;                          /* Ativa flexbox dentro do botão */
+    justify-content: center;                /* Centraliza o número horizontalmente no botão */
+    align-items: center;                    /* Centraliza o número verticalmente no botão */
+    background-color: #8b8b8b;              /* Cor de fundo de cada tecla */
+    width: auto;                            /* Faz o botão ocupar toda a largura da coluna */
+    height: 60px;                           /* Define uma altura fixa para as teclas */
+    border-radius: 10px;                   /* Arredonda as pontas dos botões */
+    cursor: pointer;                      /* Faz o mouse virar "mãozinha" ao passar por cima */
+    font-weight: bold;                  /* Deixa os números em negrito */
+    color: white;                   /* Cor do texto do botão */
+               
+}
+
+ .botao:hover {
+    background-color: #bfc0bc;        /* Muda a cor do botão quando o mouse encosta */
+    transform: scale(1.05);             /* Aumenta levemente o tamanho do botão no destaque */
+}
+
+
+
